@@ -1,47 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Results summary component</title>
 
-  Your Result
-  76
-  of 100
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              sm: "375px",
+              xl: "1440px",
+            },
+            colors: {
+              primary: {
+                "light-red": "hsl(0,100%,67%)",
+                "orangey-yellow": "hsl(39,100%,56%)",
+                "green-teal": "hsl(166,100%,37%)",
+                "cobalt-blue": "hsl(234,85%,45%)",
+              },
+              gradient: {
+                "light-slate-blue": "hsl(252,100%,67%)",
+                "light-royal-blue": "hsl(241,81%,54%)",
+                "violet-blue": "hsl(256,72%,46%,1)",
+                "persian-blue": "hsl(241,72%,46%,0)",
+              },
+              neutral: {
+                "pale-blue": "hsl(221,100%,96%)",
+                "light-lavender": "hsl(241,100%,89%)",
+                "dark-gray-blue": "hsl(224,30%,27%)",
+              },
+            },
+            fontFamily: {
+              hanken: ["Hanken Grotesk", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      @font-face {
+        font-family: "Hanken Grotesk";
+        src: url(./fonts/static/HankenGrotesk-Bold.ttf),
+          url(./fonts/static/HankenGrotesk-ExtraBold.ttf),
+          url(./fonts/static/HankenGrotesk-Medium.ttf);
+      }
+      /* p {
+        font-size: 18px;
+      } */
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>
+        <h3>Your Result</h3>
+        <h1>76</h1>
+        <p>of 100</p>
+        <h2>Great</h2>
+        <p>
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div>
+        <h2>Summary</h2>
+        <div>
+          <div>
+            <h3>Reaction</h3>
+            <p>80 / 100</p>
+          </div>
+          <div>
+            <h3>Memory</h3>
+            <p>92 / 100</p>
+          </div>
+          <div>
+            <h3>Verbal</h3>
+            <p>61 / 100</p>
+          </div>
+          <div>
+            <h3>Visual</h3>
+            <p>72 / 100</p>
+          </div>
+        </div>
+      </div>
+      <button>Continue</button>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Marlon Couto</a>.
+    </footer>
+  </body>
 </html>
