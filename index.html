@@ -54,7 +54,6 @@
         },
       };
     </script>
-    <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 11px;
@@ -63,63 +62,127 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-      /* p {
-        font-size: 18px;
-      } */
     </style>
   </head>
   <body class="bg-white font-hanken">
-    <main class="w-full h-screen flex justify-center items-center">
-      <div class="rounded-3xl w-[600px] h-[420px] shadow-2xl">
+    <main class="w-full md:min-h-screen flex justify-center items-center">
+      <!-- Results summary -->
+      <div
+        class="md:rounded-3xl md:w-[600px] md:h-[420px] md:shadow-2xl flex items-center flex-col md:flex-row"
+      >
+        <!-- colorful box -->
         <div
-          class="h-full w-1/2 p-6 bg-gradient-to-b from-gradient-light-slate-blue to-gradient-light-royal-blue rounded-3xl flex flex-col justify-center items-center space-y-6"
+          class="md:h-full md:w-1/2 p-6 bg-gradient-to-b from-gradient-light-slate-blue to-gradient-light-royal-blue md:rounded-3xl rounded-b-3xl flex flex-col justify-center items-center space-y-6"
         >
           <h3 class="text-neutral-light-lavender text-xl font-bold">
             Your Result
           </h3>
+          <!-- gradient fading circle -->
           <div
-            class="h-40 w-40 rounded-full bg-white flex flex-col items-center justify-center bg-gradient-to-b from-gradient-violet-blue"
+            class="h-40 w-40 rounded-full flex flex-col items-center justify-center bg-gradient-to-b from-gradient-violet-blue to-gradient-persian-blue"
           >
-            <h1>76</h1>
-            <p>of 100</p>
+            <div class="text-center">
+              <h1 class="text-neutral-pale-blue text-6xl font-black">76</h1>
+              <p class="text-neutral-light-lavender/50 font-semibold">of 100</p>
+            </div>
           </div>
-          <div>
-            <h2>Great</h2>
-            <p>
+          <!-- bottom text -->
+          <div class="text-center px-4">
+            <h2 class="text-neutral-pale-blue text-3xl font-bold">Great</h2>
+            <p class="text-neutral-light-lavender text-base py-3 leading-tight">
               You scored higher than 65% of the people who have taken these
               tests.
             </p>
           </div>
         </div>
-        <div>
-          <h2>Summary</h2>
+        <!-- skills summary -->
+        <div
+          class="px-8 w-full md:w-1/2 py-6 flex flex-col grow space-y-3 justify-center h-full"
+        >
           <div>
-            <div>
-              <h3>Reaction</h3>
-              <p>80 / 100</p>
-            </div>
-            <div>
-              <h3>Memory</h3>
-              <p>92 / 100</p>
-            </div>
-            <div>
-              <h3>Verbal</h3>
-              <p>61 / 100</p>
-            </div>
-            <div>
-              <h3>Visual</h3>
-              <p>72 / 100</p>
+            <h2 class="text-xl font-bold">Summary</h2>
+            <!-- skills container -->
+            <div class="space-y-3 text-base my-5 text-neutral-dark-gray-blue">
+              <!-- Reaction -->
+              <div
+                class="bg-primary-light-red/10 flex justify-between rounded-lg py-3 px-4"
+              >
+                <div class="flex space-x-2 items-center">
+                  <img
+                    class="h-4"
+                    src="./assets/images/icon-reaction.svg"
+                    alt="Reaction"
+                  />
+                  <h3 class="font-bold text-primary-light-red">Reaction</h3>
+                </div>
+                <p class="font-bold">
+                  80 <span class="text-neutral-dark-gray-blue/50">/ 100</span>
+                </p>
+              </div>
+              <!-- Memory -->
+              <div
+                class="bg-primary-orangey-yellow/10 flex justify-between rounded-lg py-3 px-4"
+              >
+                <div class="flex space-x-2 items-center">
+                  <img
+                    class="h-4"
+                    src="./assets/images/icon-memory.svg"
+                    alt="Memory"
+                  />
+                  <h3 class="font-bold text-primary-orangey-yellow">Memory</h3>
+                </div>
+                <p class="font-bold">
+                  92 <span class="text-neutral-dark-gray-blue/50">/ 100</span>
+                </p>
+              </div>
+              <!-- Verbal -->
+              <div
+                class="bg-primary-green-teal/10 flex justify-between rounded-lg py-3 px-4"
+              >
+                <div class="flex space-x-2 items-center">
+                  <img
+                    class="h-4"
+                    src="./assets/images/icon-verbal.svg"
+                    alt="Verbal"
+                  />
+                  <h3 class="font-bold text-primary-green-teal">Verbal</h3>
+                </div>
+                <p class="font-bold">
+                  61 <span class="text-neutral-dark-gray-blue/50">/ 100</span>
+                </p>
+              </div>
+              <!-- Visual -->
+              <div
+                class="bg-primary-cobalt-blue/10 flex justify-between rounded-lg py-3 px-4"
+              >
+                <div class="flex space-x-2 items-center">
+                  <img
+                    class="h-4"
+                    src="./assets/images/icon-visual.svg"
+                    alt="Visual"
+                  />
+                  <h3 class="font-bold text-primary-cobalt-blue">Visual</h3>
+                </div>
+                <p class="font-bold">
+                  72 <span class="text-neutral-dark-gray-blue/50">/ 100</span>
+                </p>
+              </div>
             </div>
           </div>
+          <!-- button -->
+          <button
+            class="bg-neutral-dark-gray-blue rounded-full p-4 md:p-3 my-4 text-neutral-pale-blue font-bold hover:bg-gradient-to-b from-gradient-light-slate-blue to-gradient-light-royal-blue transition duration-300 ease-in-out"
+          >
+            Continue
+          </button>
         </div>
-        <button>Continue</button>
       </div>
     </main>
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Marlon Couto</a>.
+      >. Coded by <a href="https://github.com/devpatola">Marlon Couto</a>.
     </footer>
   </body>
 </html>
